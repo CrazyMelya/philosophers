@@ -6,7 +6,7 @@
 /*   By: cliza <cliza@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:06:33 by cliza             #+#    #+#             */
-/*   Updated: 2021/10/23 19:03:45 by cliza            ###   ########.fr       */
+/*   Updated: 2021/10/25 13:15:08 by cliza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	*checker(void *arg)
 	data = arg;
 	while (1)
 	{
+		usleep(300);
 		if (get_ms(data->ph[data->id].eat) > data->time_to_die
 			&& ((data->cycle && data->cycle != data->ph[data->id].cycle)
 				|| !data->cycle))
