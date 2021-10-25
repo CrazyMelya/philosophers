@@ -6,7 +6,7 @@
 /*   By: cliza <cliza@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 17:44:01 by cliza             #+#    #+#             */
-/*   Updated: 2021/10/25 13:25:59 by cliza            ###   ########.fr       */
+/*   Updated: 2021/10/25 14:40:09 by cliza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void	life(t_data *data, int id)
 
 void	eating(t_data *data, int i)
 {
-	if (i % 2 && data->num % 2)
-		usleep(50);
 	sem_wait(data->forks);
 	sem_wait(data->write);
 	printf("%-6lld %d has taken a fork\n", get_ms(data->start), i + 1);

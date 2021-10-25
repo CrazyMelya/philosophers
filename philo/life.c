@@ -6,7 +6,7 @@
 /*   By: cliza <cliza@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:41:12 by cliza             #+#    #+#             */
-/*   Updated: 2021/10/23 16:03:07 by cliza            ###   ########.fr       */
+/*   Updated: 2021/10/25 14:40:01 by cliza            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,7 @@ void	*life(void	*arg)
 	while (1)
 	{
 		if (id % 2)
-		{
-			if (data->num % 2)
-				usleep(50);
 			eating_odd(data, id);
-		}
 		else
 			eating_even(data, id);
 		sleeping(data, id);
